@@ -2,7 +2,7 @@ package university.StudentDetails;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
-@Data
+//@Data
 @Component
 public class Address {
     private String StreetName;

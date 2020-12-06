@@ -34,10 +34,10 @@ public class StudentDetailsApplication {
 
 	}
 
-	@Bean
+	/*@Bean
 	public Address AddressBean(){
 		System.out.print("From Bean Annotation");
 		return new Address();
-	}
+	}*/
 
 }

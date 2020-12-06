@@ -3,6 +3,8 @@ package university.StudentDetails;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 //@Data
 @Component
@@ -18,6 +20,7 @@ public class Student {
     }
 
     @Autowired
+    @Scope("prototype")
     public void setAddress(Address address) {
         this.address = address;
     }

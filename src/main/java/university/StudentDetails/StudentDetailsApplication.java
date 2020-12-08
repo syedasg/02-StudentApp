@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import university.StudentDetails.beans.Address;
+import university.StudentDetails.beans.Student;
 
 @ComponentScan
 public class StudentDetailsApplication {
@@ -15,11 +17,11 @@ public class StudentDetailsApplication {
 
 		Student s2=context.getBean("student",Student.class);
 
-		System.out.println("@component scan Values	"+s2.getRollNo()+"		"+s2.getStudentName());
+		System.out.println("@component scan Values	"+s2.getRollNo()+"		"+s2.getStudentName()+"		"+s2.getAddress());
 
 
-		Student s1=context.getBean("studentBean",Student.class);
-		System.out.println("@Bean Annotation Values	 "+s1.getRollNo()+"		"+s1.getStudentName());
+		//Student s1=context.getBean("studentBean",Student.class);
+		//System.out.println("@Bean Annotation Values	 "+s1.getRollNo()+"		"+s1.getStudentName());
 
 
 
@@ -27,7 +29,7 @@ public class StudentDetailsApplication {
 
 
 	}
-
+/*
 	@Bean
 	public Student studentBean(){
 		System.out.print("From Bean Annotation");
@@ -43,5 +45,5 @@ public class StudentDetailsApplication {
 		System.out.print("From Bean Annotation");
 		return new Address();
 	}
-
+*/
 }

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
 public class StudentDetailsApplication {
-
+//
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context= SpringApplication.run(StudentDetailsApplication.class, args);
 
@@ -15,16 +15,11 @@ public class StudentDetailsApplication {
 
 		Student s2=context.getBean("student",Student.class);
 
-		System.out.println("@component scan Values	"+s2.getRollNo()+"		"+s2.getStudentName());
+		System.out.println("@component scan Values	"+s2.getRollNo()+"		"+s2.getStudentName()+"		"+s2.getAddress());
 
 
 		Student s1=context.getBean("studentBean",Student.class);
-		System.out.println("@Bean Annotation Values	 "+s1.getRollNo()+"		"+s1.getStudentName());
-
-
-
-
-
+		System.out.println("@Bean Annotation Values	 "+s1.getRollNo()+"		"+s1.getStudentName()+"		"+s1.getAddress());
 
 	}
 
@@ -34,14 +29,15 @@ public class StudentDetailsApplication {
 		Student s11=new Student();
 		s11.setRollNo("1");
 		s11.setStudentName("asg");
+		s11.setAddress(new Address());
 		return s11;
 
 	}
 
-	@Bean
+	/*@Bean
 	public Address AddressBean(){
 		System.out.print("From Bean Annotation");
 		return new Address();
-	}
+	}*/
 
 }

@@ -11,9 +11,10 @@ import university.StudentDetails.beans.Student;
 public class StudentDetailsApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Before run");
 		ConfigurableApplicationContext context= SpringApplication.run(StudentDetailsApplication.class, args);
 
-		System.out.println("Main");
+		System.out.println("After Run");
 
 		Student s2=context.getBean("student",Student.class);
 

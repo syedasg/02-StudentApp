@@ -8,13 +8,19 @@ import org.springframework.stereotype.Component;
 
 public class Student {
 
+
+    @Value("syed")
     private String StudentName;
+    @Value("12345")
     private String rollNo;
+    @Autowired
     private Address address;
+
     public String getRollNo() {
         return rollNo;
     }
     //String StudentName,String rollNo,
+    //@Autowired
     public Student()
     {
         System.out.println("*******Student Constructor******");
@@ -26,7 +32,7 @@ public class Student {
         //this.address=address;
     }
 
-    @Autowired
+   // @Autowired
     public Student(Address address){
         //this.StudentName=StudentName;
        // this.rollNo=rollNo;
@@ -42,12 +48,13 @@ public class Student {
     public Address getAddress() {
         return address;
     }
-
-    @Value( "${student.rollno}" )
+    @Value("55555")
+    //@Value( "${student.rollno}" )
     public void setRollNo(String rollNo) {
         this.rollNo = rollNo;
     }
-    @Value( "${student.name}" )
+    //@Value( "${student.name}" )
+    @Value("parvez")
     public void setStudentName(String studentName) {
         StudentName = studentName;
     }

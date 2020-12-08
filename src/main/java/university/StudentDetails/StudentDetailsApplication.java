@@ -2,6 +2,7 @@ package university.StudentDetails;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Scope;
 
 @ComponentScan
 @Configuration
+@EnableAutoConfiguration
 public class StudentDetailsApplication {
 	//static ConfigurableApplicationContext context=SpringApplication.run(StudentDetailsApplication.class, args);
 	public static void main(String[] args) {
@@ -31,7 +33,7 @@ public class StudentDetailsApplication {
 
 
 	}
-
+/*
 	@Bean
 	public Address AddressBean(){
 		System.out.print("From Bean Annotation");
@@ -51,7 +53,7 @@ public class StudentDetailsApplication {
 	}
 
 
-
+*/
 }
 
 
